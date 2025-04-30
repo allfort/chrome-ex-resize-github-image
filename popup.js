@@ -55,11 +55,17 @@ document.getElementById('convertButton').addEventListener('click', async () => {
           const event = new Event('input', { bubbles: true });
           textarea.dispatchEvent(event);
 
-          // GitHubのPreview更新をトリガー
-          const previewButton = document.querySelector('button.js-preview-tab');
-          if (previewButton) {
-            console.log('Preview更新ボタンをクリック');
-            previewButton.click();
+          // Previewタブが選択されている場合のみ更新をトリガー
+          const previewTab = document.querySelector('.js-preview-tab.selected');
+          if (previewTab) {
+            console.log('Previewタブが選択されています。更新をトリガーします。');
+            const previewButton = document.querySelector('button.js-preview-tab');
+            if (previewButton) {
+              console.log('Preview更新ボタンをクリック');
+              previewButton.click();
+            }
+          } else {
+            console.log('Previewタブが選択されていないため、更新をスキップします。');
           }
 
           convertedCount++;
