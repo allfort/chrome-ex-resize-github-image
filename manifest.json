@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Markdown Image to HTML Converter",
+  "version": "1.0",
+  "description": "Markdown形式の画像タグをHTMLのimgタグに変換します",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
