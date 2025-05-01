@@ -3,6 +3,9 @@
   "name": "Resize Github Image",
   "version": "1.0.0",
   "description": "Github上で貼り付けた画像の大きさを調整します。",
+  "author": "allfort",
+  "homepage_url": "https://github.com/allfort/chrome-ex-resize-github-image",
+  "minimum_chrome_version": "88",
   "icons": {
     "128": "img/img128.png",
     "256": "img/img256.png"
@@ -13,8 +16,9 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://github.com/*"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "offline_enabled": true
 }
