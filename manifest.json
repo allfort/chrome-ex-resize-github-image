@@ -1,8 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Markdown Image to HTML Converter",
-  "version": "1.0",
-  "description": "Markdown形式の画像タグをHTMLのimgタグに変換します",
+  "name": "Resize Github Image",
+  "version": "1.0.0",
+  "description": "Github上で貼り付けた画像の大きさを調整します。",
+  "icons": {
+    "128": "img/img128.png",
+    "256": "img/img256.png"
+  },
   "permissions": ["activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html"
